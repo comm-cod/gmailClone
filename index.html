@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body
+    class="bg-gray-100 p-0 m-0 box-border overflow-x-hidden overflow-y-hidden"
+  >
+    <!-- NAvbar -->
+    <nav class="flex p-2 w-full gap-2">
+      <!-- left Part -->
+      <div class="flex items-center justify-center gap-2 min-w-[238px]">
+        <div>
+          <i class="fa-solid fa-bars p-4 text-gray-600"></i>
+        </div>
+        <div class="flex pr-8">
+          <img
+            class=""
+            src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- mid part -->
+      <div
+        class="flex items-center gap-2 group bg-slate-200 border-none rounded-full w-full"
+      >
+        <i class="fa-solid fa-magnifying-glass p-4"></i>
+        <input
+          type="text"
+          placeholder="Search mail"
+          class="w-full bg-slate-200 mr-96"
+        />
+        <button class="flex justify-end">
+          <i class="fa-solid fa-sliders p-4 w-full"></i>
+        </button>
+      </div>
+
+      <!-- right part -->
+      <div class="flex flex-row items-center gap-4 w-full justify-end">
+        <i class="fa-solid fa-circle-question p-2 text-slate-500"></i>
+        <i class="fa-solid fa-gear p-2 text-slate-500"></i>
+        <i class="ri-grid-fill p-2 text-slate-500"></i>
+        <div
+          class="flex bg-orange-500 rounded-full w-5 h-5 p-5 text-white justify-center items-center"
+        >
+          <h1 class="font-semibold text-2xl">S</h1>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div id="main" class="flex flex-row w-full">
+      <!-- ? main-Left -->
+      <div class="flex flex-col w-[256px] mr-4">
+        <!-- compose btn -->
+        <div
+          id="compose"
+          class="flex flex-row gap-3 bg-compose text-gray-800 p-4 items-center w-36 rounded-2xl m-2"
+        >
+          <i class="fa-solid fa-pen"></i>
+          <span class="text-gray-600 text-md">Compose</span>
+        </div>
+        <!-- inbox btn -->
+        <div class="flex flex-col w-60 mt-2">
+          <div class="flex flex-row items-center gap-4 bg-inbox rounded-r-full">
+            <i class="fa-solid fa-inbox pl-6 py-2"></i>
+            <span class="text-gray-800 font-semibold">Inbox</span>
+          </div>
+          <div class="flex flex-row items-center gap-4 rounded-r-full">
+            <i class="fa-regular fa-star pl-6 py-2 text-gray-500"></i>
+            <span class="text-gray-800 font-normal">Starred</span>
+          </div>
+          <div class="flex flex-row items-center gap-4 rounded-r-full">
+            <i class="fa-regular fa-clock pl-6 py-2 text-gray-500"></i>
+            <span class="text-gray-800 font-normal">Snoozed</span>
+          </div>
+          <div class="flex flex-row items-center gap-4 rounded-r-full">
+            <i class="fa-regular fa-paper-plane pl-6 py-2 text-gray-500"></i>
+            <span class="text-gray-800 font-normal">Sent</span>
+          </div>
+          <div class="flex flex-row items-center gap-4 rounded-r-full">
+            <i class="fa-regular fa-file pl-6 py-2 text-gray-500"></i>
+            <span class="text-gray-800 font-normal">Drafts</span>
+          </div>
+          <div class="flex flex-row items-center gap-4 rounded-r-full -mt-1">
+            <i class="ri-arrow-down-s-line pl-6 py-2 text-gray-500"></i>
+            <span class="text-gray-800 font-normal">More</span>
+          </div>
+        </div>
+        <!-- labels -->
+        <div class="flex flex-row items-center justify-between mt-5">
+          <span class="text-gray-800 pl-5 font-medium text-lg">Labels</span>
+          <i class="fa-solid fa-plus pl-6 pr-6 text-gray-500"></i>
+        </div>
+      </div>
+
+      <!-- ? main-Mid -->
+      <div class="flex flex-col bg-white rounded-3xl w-full h-screen">
+        <!-- Mid top -->
+        <div class="flex flex-row justify-between w-full m-2 px-2 py-2">
+          <!-- mid top Left -->
+          <div class="flex flex-row gap-6 items-center text-sm">
+            <div class="flex gap-1">
+              <input type="checkbox" name="" id="" class="text-gray-500" />
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+            <i class="fa-solid fa-rotate-right text-gray-500"></i>
+            <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+          </div>
+          <!-- mid top Right -->
+          <div class="flex flex-row gap-6 items-center text-sm text-gray-500">
+            <span class="">1-50 of 200</span>
+            <i class="fa-solid fa-chevron-left text-gray-300"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div class="flex gap-1 items-center text-gray-600">
+              <i class="fa-regular fa-keyboard"></i>
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Mid mid primary -->
+        <div class="flex flex-row gap-2 mt-3 pl-2">
+          <!-- primary -->
+          <div
+            class="flex flex-row w-[252px] gap-2 items-center text-primary border-b-4 border-b-primary"
+          >
+            <div class="py-2 px-2">
+              <i class="fa-solid fa-inbox"></i>
+            </div>
+            <div>Primary</div>
+          </div>
+          <div class="flex flex-row w-[252px] gap-2 items-center">
+            <div class="py-2 px-2">
+              <i class="fa-solid fa-tag"></i>
+            </div>
+            <div>Promotions</div>
+          </div>
+          <div class="flex flex-row w-[252px] gap-2 items-center">
+            <div class="py-2 px-2">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div>Social</div>
+          </div>
+        </div>
+        <!-- Mid Mails -->
+        <div class="flex flex-col overflow-y-scroll">
+          <!-- mails start from here -->
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+          <div
+            class="flex flex-row items-center justify-between bg-slate-100 border-t border-gray-300"
+          >
+            <!-- mail left part -->
+            <div class="flex gap-2 items-center p-2 pl-4">
+              <input type="checkbox" name="" id="" class="text-gray-500 pl-2" />
+              <i class="fa-regular fa-star py-2 text-gray-500"></i>
+              <span>PW Skills</span>
+            </div>
+            <!-- mail mid part -->
+            <div class="flex text-gray-700 text-lg">
+              <p>Important mail for 2 step verification cccccc...</p>
+            </div>
+            <!-- mail right part -->
+            <div class="px-4">03:33</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ? main-right -->
+      <div class="flex flex-col w-[56px] h-fit items-center justify-between mt-2">
+        <div class="felx flex-col gap-5 justify-center">
+          <img
+            class=" px-3 py-4 "
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
+            alt=""
+          />
+
+          <img
+            class="px-3 py-4"
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Google_Keep_icon_%282020%29.svg"
+            alt=""
+          />
+
+          <img
+            class="px-3 py-4"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Google_Tasks_2021.svg"
+            alt=""
+          />
+
+          <img
+            class="px-3 py-4"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Google_account_icon.svg"
+            alt=""
+          />
+
+          <div class="border border-gray-300 w-8 mx-auto my-4"></div>
+          <div class="flex justify-center px-3 py-4">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        
+          <i class="fa-solid fa-chevron-right mx-auto mt-80"></i>
+        
+      </div>
+    </div>
+  </body>
+</html>
